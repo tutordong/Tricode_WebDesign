@@ -1,0 +1,187 @@
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Aturan untuk navbar-brand (Kuliner Surabaya) */
+.navbar-brand {
+    color: #3e8e41 !important; /* Warna link */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+/* Hapus efek hover pada navbar-brand */
+.navbar-brand:hover {
+    color: #3e8e41 !important; /* Tetap pada warna yang sama saat di-hover */
+    background-color: transparent; /* Tidak ada latar belakang saat di-hover */
+}
+
+/* Navbar Links */
+nav a {
+    margin: 0 15px;
+    color: #3e8e41 !important; /* Warna link */
+    font-weight: 600;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(0, 0, 0, 0.1); /* Warna saat hover atau aktif */
+    color: #3e8e41;
+}
+
+nav a.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #3e8e41;
+}
+
+nav a:hover {
+    color: #275529 !important;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-image: url('https://via.placeholder.com/1920x500');
+    background-size: cover;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 4rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+/* Place Items */
+.place-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.place-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-buttons a {
+    margin-right: 10px;
+}
+
+/* Admin Dashboard Sidebar */
+.sidebar {
+    height: 100vh;
+    background-color: #009688;
+    color: white;
+    position: fixed;
+    width: 240px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.sidebar .nav-link {
+    color: white;
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: #00796b;
+    color: #fff;
+}
+
+.container-fluid.content-wrapper {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.card-header {
+    background-color: #009688;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #009688;
+    border-color: #00796b;
+}
+
+.btn-primary:hover {
+    background-color: #00796b;
+    border-color: #00695c;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+    .navbar-collapse.show {
+        display: block !important; /* Tampilkan saat tombol hamburger ditekan */
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    .container-fluid.content-wrapper {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2.5rem;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+    
+    .container-fluid.content-wrapper {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+.bi {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+footer .list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+footer .list-unstyled a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer .list-unstyled a:hover {
+    color: #337ab7;
+}
