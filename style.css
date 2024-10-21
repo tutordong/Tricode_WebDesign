@@ -1,47 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Aturan untuk navbar-brand (Kuliner Surabaya) */
 .navbar-brand {
-    color: #3e8e41 !important; /* Warna link */
-    text-decoration: none; /* Menghilangkan garis bawah */
+    color: #3e8e41 !important;
+    text-decoration: none;
 }
 
-/* Hapus efek hover pada navbar-brand */
 .navbar-brand:hover {
-    color: #3e8e41 !important; /* Tetap pada warna yang sama saat di-hover */
-    background-color: transparent; /* Tidak ada latar belakang saat di-hover */
+    color: #3e8e41 !important;
+    background-color: transparent;
 }
 
 /* Navbar Links */
 nav a {
     margin: 0 15px;
-    color: #3e8e41 !important; /* Warna link */
+    color: #3e8e41 !important;
     font-weight: 600;
+    border-radius: 10px;
 }
 
-nav a:hover, nav a.active {
-    background-color: rgba(0, 0, 0, 0.1); /* Warna saat hover atau aktif */
-    color: #3e8e41;
-}
-
+nav a:hover,
 nav a.active {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #3e8e41;
-}
-
-nav a:hover {
-    color: #275529 !important;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #a4d8a8;
+    color: #000000 !important;
+    border-radius: 10px;
 }
 
 /* Jumbotron */
 .jumbotron {
     background-image: url('https://via.placeholder.com/1920x500');
     background-size: cover;
+    background-position: center;
     color: white;
     padding: 150px 0;
     text-align: center;
@@ -51,6 +51,7 @@ nav a:hover {
     font-size: 4rem;
 }
 
+/* Container */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -60,27 +61,73 @@ nav a:hover {
     margin-top: 20px;
 }
 
-/* Place Items */
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3e8e41;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 5px;
+    background-color: #3e8e41;
+    margin: 10px auto 0;
+}
+
+/* Place Items Styling */
 .place-item {
     background: #fff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.place-item:hover {
+    transform: translateY(-5px);
 }
 
 .place-item img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
+/* Social Buttons */
 .social-buttons a {
     margin-right: 10px;
+    color: #3e8e41;
+    transition: color 0.3s ease;
+}
+
+.social-buttons a:hover {
+    color: #fff;
+}
+
+.social-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3e8e41;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #2e7031;
 }
 
 /* Admin Dashboard Sidebar */
 .sidebar {
     height: 100vh;
-    background-color: #009688;
+    background-color: #3e8e41;
     color: white;
     position: fixed;
     width: 240px;
@@ -95,48 +142,162 @@ nav a:hover {
     padding: 10px 15px;
 }
 
-.sidebar .nav-link:hover, .sidebar .nav-link.active {
-    background-color: #00796b;
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #275529;
     color: #fff;
 }
 
+/* Main Content Wrapper */
 .container-fluid.content-wrapper {
     margin-left: 240px;
     padding: 20px;
 }
 
 .card-header {
-    background-color: #009688;
+    background-color: #3e8e41;
     color: white;
     font-weight: bold;
 }
 
+/* Buttons */
 .btn-primary {
-    background-color: #009688;
-    border-color: #00796b;
+    background-color: #3e8e41; 
+    border-color: #275529;
 }
 
 .btn-primary:hover {
-    background-color: #00796b;
-    border-color: #00695c;
+    background-color: #275529; 
+    border-color: #1f4c28; 
 }
 
+/* Tables */
 .table {
     margin-bottom: 0;
 }
 
-/* Responsif */
+footer {
+    border-top: 2px solid #3e8e41; 
+}
+
+footer h5 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+footer p {
+    line-height: 1.5; 
+}
+
+footer a {
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+footer a:hover {
+    color: #2e7031; 
+}
+
+footer .btn-success {
+    background-color: #3e8e41;
+    border-color: #3e8e41;
+}
+
+footer .btn-success:hover {
+    background-color: #2e7031; 
+    border-color: #2e7031;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px; 
+}
+
+/* About Section Styling */
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    text-align: left;
+}
+
+/* Vision and Mission */
+.vision-mission {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 30px;
+}
+
+.vision, .mission {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background: #e0f2f1; 
+    border-radius: 10px; 
+}
+
+.vision strong, .mission strong {
+    font-size: 1.5rem;
+    color: #3e8e41;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Team Section */
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.team-member {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-basis: calc(30% - 40px);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); 
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #3e8e41; 
+}
+
+.team-member strong {
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #3e8e41;
+}
+
+.team-member p {
+    color: #555;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 992px) {
     .navbar-collapse.show {
-        display: block !important; /* Tampilkan saat tombol hamburger ditekan */
+        display: block !important;
     }
-    
+
     .sidebar {
         position: relative;
         width: 100%;
         height: auto;
     }
-    
+
     .container-fluid.content-wrapper {
         margin-left: 0;
     }
@@ -146,42 +307,17 @@ nav a:hover {
     .jumbotron h1 {
         font-size: 2.5rem;
     }
-    
-    .sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
+
+    .vision-mission {
+        flex-direction: column; 
     }
-    
-    .container-fluid.content-wrapper {
-        margin-left: 0;
-        padding: 10px;
+
+    .vision, .mission {
+        margin: 10px 0; 
     }
-}
-.bi {
-    font-size: 1.5rem;
-    margin-right: 5px;
-}
 
-footer {
-    font-size: 0.9rem;
-}
-
-footer .list-unstyled {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-footer .list-unstyled li {
-    margin-bottom: 10px;
-}
-
-footer .list-unstyled a {
-    color: #333;
-    text-decoration: none;
-}
-
-footer .list-unstyled a:hover {
-    color: #337ab7;
+    .team-member {
+        flex-basis: calc(100% - 40px); 
+        margin: 10px auto; 
+    }
 }
